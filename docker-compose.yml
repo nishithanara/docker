@@ -1,0 +1,22 @@
+version: '3'
+services:
+  tarin:
+    image: nishithanara/phonepaytrain:v1
+    ports:
+      - "8005:80"
+    deploy:
+      replicas: 3
+
+  movie:
+    image: nishithanara/phonepaymovie:v1
+    ports:
+      - "8006:80"
+    deploy:
+      replicas: 3
+      
+  recharge:
+    image: nishithanara/phonepayrecharge:v1
+    ports:
+      - "8007:80"
+    deploy:
+      replicas: 3
